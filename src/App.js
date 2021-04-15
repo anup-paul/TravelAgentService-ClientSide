@@ -14,6 +14,7 @@ import AddReview from './Components/Dashboard/AddReview/AddReview';
 import FeaturedList from './Components/Dashboard/FeautredList/FeaturedList';
 import AddAmin from './Components/Dashboard/AddAdmin/AddAmin';
 import ManageService from './Components/Dashboard/ManageService/ManageService';
+import Booking from './Components/Dashboard/Booking/Booking';
 
 
 export const UserContext = createContext();
@@ -26,7 +27,6 @@ function App() {
 
   return (
     <div>
-      <h1 className="text-center">Name:{loggedInUser.name}</h1>
 
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
 
@@ -59,6 +59,10 @@ function App() {
 
             <PrivateRoute path="/manageService">
                 <ManageService></ManageService>
+            </PrivateRoute>
+
+            <PrivateRoute path="/booking/:id">
+                <Booking></Booking>
             </PrivateRoute>
 
             <Route path="/login">

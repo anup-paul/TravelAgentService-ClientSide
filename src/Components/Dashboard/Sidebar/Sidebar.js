@@ -3,15 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserPlus, faUserFriends, faCog, faCalendarWeek, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './SideBar.css'
-import AddFeatures from '../AddFeatures/AddFeatures';
+
 
 
 
 const Sidebar = () => {
 
-    // const handleAddFeatures = ()=>{
-    //     <AddFeatures></AddFeatures>
-    // }
+
 
     return (
         <div className="mt-5">
@@ -19,7 +17,13 @@ const Sidebar = () => {
                 <ul className="list-unstyled sidebarDesign">
 
                     <li >
-                        <Link  to="/addFeatures" className="text-white " style={{ textDecoration: "none" }} >
+                        <Link to="/home" className="text-white " style={{ textDecoration: "none" }} >
+                            <FontAwesomeIcon icon={faUserPlus} /> Home
+                        </Link>
+                    </li>
+
+                    <li >
+                        <Link to="/addFeatures" className="text-white " style={{ textDecoration: "none" }} >
                             <FontAwesomeIcon icon={faUserPlus} /> Add Features
                             </Link>
                     </li>
@@ -31,7 +35,7 @@ const Sidebar = () => {
                     <li>
                         <Link to="/featuredList" className="text-white" style={{ textDecoration: "none" }}  >
 
-                            <FontAwesomeIcon icon={faUserFriends} /> All Featured 
+                            <FontAwesomeIcon icon={faUserFriends} /> All Featured
                         </Link>
                     </li>
                     <li>

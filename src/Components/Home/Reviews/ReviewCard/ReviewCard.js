@@ -6,10 +6,10 @@ const ReviewCard = ({ reviewCardInfo }) => {
         <div className="col-md-4">
             <div className="card text-center p-4 border border-2 shadow p-3 mb-5 bg-body rounded" >
                 <div className="reviewImgDesign d-flex justify-content-evenly align-items-center" >
-                    <img className="img-fluid" src={reviewCardInfo.image} alt="" />
+                    <img className="img-fluid" src={reviewCardInfo.imageURL} alt="" />
                     <div>
                         <h6><b>{reviewCardInfo.name}</b></h6>
-                        <h6><b>{reviewCardInfo.from}</b></h6>
+                        <h6 className="text-secondary">{reviewCardInfo.from}</h6>
                     </div>
                 </div>
                 <p className="text-secondary my-4" >{reviewCardInfo.description}</p>

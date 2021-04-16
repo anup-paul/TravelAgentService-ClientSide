@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
+import DeleteService from './DeleteService';
 
 const ManageService = () => {
+
+    const [features, setFeatures] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:7000/features')
+            .then(res => res.json())
+            .then(data => setFeatures(data))
+    }, [])
+
     return (
         <div className="container-fluid row" >
             <div className="col-md-2" style={{ backgroundColor: "rgb(12, 11, 27)", height: "100vh" }}>
                 <Sidebar></Sidebar>
             </div>
             <div className="col-md-10">
-                <h1>Manage service</h1>
+                
+                <div className="row">
+                    {
+                        features.map(feature => <DeleteService feature={feature} ></DeleteService>)
+                    }
+                </div>
+                
             </div>
         </div>
     );

@@ -52,7 +52,7 @@ const AddFeatures = () => {
             </div>
             <div className="col-md-10">
 
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center mt-5">
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <input  {...register("title", { required: true })} type="text" name="title" placeholder="Enter Features Title" className="form-control" />

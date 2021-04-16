@@ -24,7 +24,7 @@ const Booking = () => {
             </div>
             <div className="col-md-10">
                 <div className="text-center" >
-                    <h6>Hello {loggedInUser.name}! Complete your booking process</h6>
+                    <h6>Hello {loggedInUser.name}! This is your booking process</h6>
                     <h4><b>{bookingData.title}</b></h4>
                 </div>
                 <div className="p-5 w-50">

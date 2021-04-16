@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 import FeaturedTable from './FeaturedTable';
 
@@ -12,10 +13,24 @@ const FeaturedList = () => {
             .then(res => res.json())
             .then(data => {
                 setBookingList(data)
-                console.log(data);
+                // console.log(data);
             })
 
     }, [])
+
+
+      // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    // useEffect(() => {
+    //     fetch('http://localhost:7000/findAdmin', {
+    //         method: 'POST',
+    //         headers: { 'content-type': 'application/json' },
+    //         body: JSON.stringify({ email: loggedInUser.email})
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => console.log(data))
+    // }, [])
+
 
     return (
         <div className="container-fluid row" >
@@ -28,7 +43,7 @@ const FeaturedList = () => {
                 
                     <div className="w-75 text-center mt-5" >
                     <h4 className="mb-5 " ><b>Booking List</b></h4>
-                        <table class="table table-borderless">
+                        <table className="table table-borderless">
                             <thead>
                                 <tr>
                                     <th scope="col"></th>
@@ -40,12 +55,7 @@ const FeaturedList = () => {
                             <tbody>
                                 {
                                     bookingList.map((booking, index) =>
-                                        <tr>
-                                            <td>{index + 1}</td>
-                                            <td>{booking.name}</td>
-                                            <td>{booking.email}</td>
-                                            <td>{booking.title}</td>
-                                        </tr>
+                                       <FeaturedTable booking={booking} index={index} ></FeaturedTable>
                                     )
                                 }
                             </tbody>

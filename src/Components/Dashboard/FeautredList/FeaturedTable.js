@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { UserContext } from '../../../App';
 
-const FeaturedTable = ({booking}) => {
+const FeaturedTable = ({ booking, index }) => {
+
+
+  
+
     return (
-        <div>
-            <p>This component not used</p>
-        </div>
+        <tr>
+            <td>{index + 1}</td>
+            <td>{booking.name}</td>
+            <td>{booking.email}</td>
+            <td>{booking.title}</td>
+        </tr>
     );
 };
 

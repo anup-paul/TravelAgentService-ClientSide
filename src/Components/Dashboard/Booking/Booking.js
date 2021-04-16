@@ -17,14 +17,18 @@ const Booking = () => {
             .then(data => { setBookingData(data[0]) })
     }, [id])
 
+
+   
+
+
     return (
         <div className="container-fluid row" >
             <div className="col-md-2" style={{ backgroundColor: "rgb(12, 11, 27)", height: "100vh" }}>
                 <Sidebar></Sidebar>
             </div>
             <div className="col-md-10">
-                <div className="text-center" >
-                    <h6>Hello {loggedInUser.name}! This is your booking process</h6>
+                <div className="text-center mt-5" >
+                    <h6>Hello {loggedInUser.name}! This is your booking process for</h6>
                     <h4><b>{bookingData.title}</b></h4>
                 </div>
                 <div className="p-5 w-50">

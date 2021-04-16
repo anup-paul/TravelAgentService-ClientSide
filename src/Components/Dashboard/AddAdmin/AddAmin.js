@@ -8,11 +8,7 @@ const AddAmin = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
-        // const adminData={
-        //     name:data.name,
-        //     email:data.email
-        // }
-        // console.log(adminData);
+      
         fetch('http://localhost:7000/admin',{
             method: 'POST',
             headers: { 'content-type': 'application/json' },

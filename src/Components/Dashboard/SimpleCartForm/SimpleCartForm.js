@@ -12,10 +12,27 @@ const SimpleCartForm = ({bookingData}) => {
     const [paymentError, setPaymentError] = useState(null);
     const [paymentSuccess, setPaymentSuccess] = useState(null);
 
+    const [userName, setUserName] = useState(null);
+    const [userEmail, setUserEmail] = useState(null);
+
+
+
+    const handleName = (event) => {
+        setUserName(event.target.value)
+    }
+
+    const handleEmail = (event) => {
+     
+        setUserEmail(event.target.value);
+        
+    }
+
+
     const handlePaymentSubmit = (paymentId)=>{
 
-        const bookingInfo ={
-            ...loggedInUser,
+        const bookingInfo = {
+            name:userName,
+            email:userEmail,
             paymentId,
             title:bookingData.title
         }
@@ -57,9 +74,13 @@ const SimpleCartForm = ({bookingData}) => {
     };
 
 
+
+
     return (
         <div >
             <form onSubmit={handleSubmit} >
+            <input type="name" name="name" onBlur={handleName} placeholder="enter your name" className="form-control mb-2"/>
+                <input type="email" name="email" onBlur={handleEmail} placeholder="enter your email" className="form-control mb-2"/>
                 <CardElement />
                 <br/>
                 <button className="btn btn-primary" type="submit" disabled={!stripe}>
@@ -67,12 +88,13 @@ const SimpleCartForm = ({bookingData}) => {
                 </button>
                 <br/>
                 {
-                    paymentError && <h6 className="text-danger" >{paymentError}</h6>
+                    paymentError && <h6 className="text-danger mt-2" >{paymentError}</h6>
                 }
                 {
-                    paymentSuccess && <h6 className="text-success">Complete your booking process. Thankyou!</h6>
+                    paymentSuccess && <h6 className="text-success mt-2">Complete your booking process. Thankyou!</h6>
                 }
             </form>
+
         </div>
     );
 };

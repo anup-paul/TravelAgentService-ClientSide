@@ -35,7 +35,7 @@ const Sidebar = () => {
                     <li>
                         <Link to="/featuredList" className="text-white" style={{ textDecoration: "none" }}  >
 
-                            <FontAwesomeIcon icon={faUserFriends} /> All Featured
+                            <FontAwesomeIcon icon={faUserFriends} /> Booking List
                         </Link>
                     </li>
                     <li>

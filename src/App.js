@@ -15,6 +15,7 @@ import FeaturedList from './Components/Dashboard/FeautredList/FeaturedList';
 import AddAmin from './Components/Dashboard/AddAdmin/AddAmin';
 import ManageService from './Components/Dashboard/ManageService/ManageService';
 import Booking from './Components/Dashboard/Booking/Booking';
+import UserFeatureList from './Components/Dashboard/UserFeatureList/UserFeatureList';
 
 
 export const UserContext = createContext();
@@ -51,6 +52,10 @@ function App() {
 
             <PrivateRoute path="/featuredList">
                 <FeaturedList></FeaturedList>
+            </PrivateRoute>
+
+            <PrivateRoute path="/userFeaturedList">
+                <UserFeatureList></UserFeatureList>
             </PrivateRoute>
 
             <PrivateRoute path="/addAdmin">

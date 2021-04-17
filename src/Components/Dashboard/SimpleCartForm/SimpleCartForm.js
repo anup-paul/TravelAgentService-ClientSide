@@ -83,6 +83,9 @@ const SimpleCartForm = ({bookingData}) => {
                 <input type="email" name="email" onBlur={handleEmail} placeholder="enter your email" className="form-control mb-2"/>
                 <CardElement />
                 <br/>
+                <br/>
+                <h6><b>Your service charge will be ${bookingData.bookingCost}</b></h6>
+                
                 <button className="btn btn-primary" type="submit" disabled={!stripe}>
                     Pay
                 </button>

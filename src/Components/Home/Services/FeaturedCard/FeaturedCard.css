@@ -1,0 +1,7 @@
+.card-design:hover img {
+    transform: scale(1.1);
+}
+
+.card-design:hover h3 {
+    transform: scale(1.1);
+}

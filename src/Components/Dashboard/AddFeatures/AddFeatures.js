@@ -31,6 +31,7 @@ const AddFeatures = () => {
         const featuresData = {
             title: data.title,
             description: data.description,
+            bookingCost: data.cost,
             imageURL: imageURL
         };
         console.log(featuresData);
@@ -59,6 +60,8 @@ const AddFeatures = () => {
                         <br />
                         <input  {...register("description", { required: true })} type="text" name="description" placeholder="Enter Features Description" className="form-control" />
                         <br />
+                        <input  {...register("cost", { required: true })} type="text" name="cost" placeholder="Enter Features cost" className="form-control" />
+                        <br/>
                         <input {...register("name", { required: true })} type="file" name="name" onChange={handleImageUpload} />
                         <br />
                         <br/>

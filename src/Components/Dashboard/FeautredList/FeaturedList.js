@@ -12,7 +12,7 @@ const FeaturedList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:7000/findAdmin', {
+        fetch('https://still-brushlands-40409.herokuapp.com/findAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })

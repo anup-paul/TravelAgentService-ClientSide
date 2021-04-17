@@ -9,7 +9,7 @@ const AddAmin = () => {
     const onSubmit = data => {
         console.log(data)
       
-        fetch('http://localhost:7000/admin',{
+        fetch('https://still-brushlands-40409.herokuapp.com/admin',{
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

@@ -38,7 +38,7 @@ const SimpleCartForm = ({bookingData}) => {
         }
         console.log(bookingInfo);
 
-        fetch('http://localhost:7000/bookingData',{
+        fetch('https://still-brushlands-40409.herokuapp.com/bookingData',{
             method:'POST',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(bookingInfo)

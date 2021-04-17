@@ -5,7 +5,7 @@ const DeleteService = ({ feature }) => {
 
     const handleDelete = (id) =>{
 
-        fetch(`http://localhost:7000/delete/${id}`,
+        fetch(`https://still-brushlands-40409.herokuapp.com/delete/${id}`,
         {
             method:'DELETE'
         })

@@ -7,7 +7,7 @@ const ManageService = () => {
     const [features, setFeatures] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:7000/features')
+        fetch('https://still-brushlands-40409.herokuapp.com/features')
             .then(res => res.json())
             .then(data => setFeatures(data))
     }, [])

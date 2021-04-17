@@ -12,7 +12,7 @@ const Booking = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch(`http://localhost:7000/bookingFeatures/${id}`)
+        fetch(`https://still-brushlands-40409.herokuapp.com/bookingFeatures/${id}`)
             .then(res => res.json())
             .then(data => { setBookingData(data[0]) })
     }, [id])

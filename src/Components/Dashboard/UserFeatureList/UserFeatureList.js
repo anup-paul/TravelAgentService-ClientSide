@@ -9,7 +9,7 @@ const UserFeatureList = () => {
     const [userBooking, setUserBooking] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:7000/specificBookingList?email=${loggedInUser.email}`)
+        fetch(`https://still-brushlands-40409.herokuapp.com/specificBookingList?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => setUserBooking(data))
     }, [])

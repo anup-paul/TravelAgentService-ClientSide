@@ -36,7 +36,7 @@ const AddFeatures = () => {
         };
         console.log(featuresData);
 
-        const url = `http://localhost:7000/addFeatures`
+        const url = `https://still-brushlands-40409.herokuapp.com/addFeatures`
         fetch(url, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },

@@ -37,7 +37,7 @@ const AddReview = () => {
         };
         console.log(featuresData);
 
-        const url = `http://localhost:7000/addReviews`
+        const url = `https://still-brushlands-40409.herokuapp.com/addReviews`
         fetch(url, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },

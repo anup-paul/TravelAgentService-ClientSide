@@ -5,7 +5,7 @@ import ServiceHeader from '../ServiceHeader/ServiceHeader';
 const Services = () => {
     return (
         <div>
-            <h3 className="text-center" ><b>Services</b></h3>
+            <h3 className="text-center mt-5" ><b>Services</b></h3>
             <ServiceHeader></ServiceHeader>
             <Featured></Featured>
         </div>

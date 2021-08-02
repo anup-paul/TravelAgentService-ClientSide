@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
-import FeaturedTable from './FeaturedTable';
+
 
 const FeaturedList = () => {
 
@@ -22,15 +22,15 @@ const FeaturedList = () => {
     }, [])
 
 
-    const handleStatues = (email,event) =>{
+    // const handleStatues = (email,event) =>{
         
-        console.log(email);
-        // console.log(event.target.value)
-        // const userUpdate = {
-        //     status:event.target.value
-        // }
-        // console.log(userUpdate)
-    }
+    //     console.log(email);
+    //     // console.log(event.target.value)
+    //     // const userUpdate = {
+    //     //     status:event.target.value
+    //     // }
+    //     // console.log(userUpdate)
+    // }
 
 
 

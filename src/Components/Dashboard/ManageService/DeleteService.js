@@ -4,6 +4,8 @@ import './DelecteService.css';
 const DeleteService = ({ feature }) => {
 
     const handleDelete = (id) =>{
+        
+        alert('Are you sure')
 
         fetch(`https://still-brushlands-40409.herokuapp.com/delete/${id}`,
         {
